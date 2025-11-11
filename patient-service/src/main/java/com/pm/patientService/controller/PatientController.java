@@ -4,6 +4,7 @@ import com.pm.patientService.dto.PatientRequestDTO;
 import com.pm.patientService.dto.PatientResponseDTO;
 import com.pm.patientService.dto.validators.CreatePatientValidationGroup;
 import com.pm.patientService.service.PatientService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.groups.Default;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/patients")
+@Tag(name = "Patient", description = "API")
 public class PatientController {
 
     private final PatientService patientService;
